@@ -1,10 +1,12 @@
 # analise-preditiva-crm-cliente-conversao-python
 Prever se um cliente do CRM, contactado por uma campanha de marketing, irá converter (ou seja, comprar um produto ou subscrever um serviço).
 
+
 🚀  Projeto de Data Science: Previsão de Conversão de Marketing (Lead Scoring)
 Este é um projeto completo de Ciência de Dados focado em prever a conversão de clientes (Lead Scoring) com base em dados de uma campanha de marketing de um banco.
 
 O objetivo principal é construir um modelo de Machine Learning que possa identificar quais clientes têm a maior probabilidade de converter (subscrever um produto) após serem contactados pela equipa de marketing.
+
 
 🎯 O Problema de Negócio
 Uma equipa de marketing tem um orçamento e tempo limitados. Contactar todos os clientes da base de dados é caro e ineficiente. A maioria dos clientes contactados não irá converter, resultando em desperdício de recursos.
@@ -12,6 +14,7 @@ Uma equipa de marketing tem um orçamento e tempo limitados. Contactar todos os 
 O pior erro, no entanto, é um Falso Negativo: um cliente que o modelo previu como "Não" (não converte), mas que na realidade iria converter. Esta é uma venda perdida.
 
 O objetivo deste projeto é criar um modelo que minimize os Falsos Negativos, aumentando o Recall (a capacidade de "apanhar" todos os clientes que realmente iriam converter), para que a equipa de marketing possa focar os seus esforços nos leads mais promissores.
+
 
 📊 O Dataset
 Utilizámos o Bank Marketing Dataset (Bank Additional Full), um conjunto de dados público e popular para problemas de classificação.
@@ -28,6 +31,7 @@ Variáveis Económicas: emp.var.rate, cons.price.idx.
 
 Variável Alvo: y - O cliente subscreveu o depósito a prazo? ('yes' ou 'no').
 
+
 🛠️ Ferramentas Utilizadas
 Python (3.x)
 
@@ -36,6 +40,7 @@ Jupyter Notebook: Para exploração e prototipagem interativa.
 Pandas: Para manipulação e carregamento dos dados.
 
 Scikit-learn (sklearn): Para todo o fluxo de Machine Learning.
+
 
 📈 Metodologia (O Processo)
 O projeto seguiu os passos clássicos de um fluxo de trabalho de Machine Learning:
@@ -64,12 +69,14 @@ A "Magia": Usámos o parâmetro class_weight='balanced'. Isto força o modelo a 
 
 Resultado: O modelo final sacrificou um pouco da precisão (Precision) para ganhar um aumento drástico no Recall (capacidade de encontrar os 'yes').
 
+
 💡 Principais Insights e Conclusões
 A Acurácia pode enganar: O nosso primeiro modelo tinha 91% de acurácia, mas era péssimo para o negócio. O segundo modelo, focado no Recall, é muito mais valioso, pois encontra de facto as oportunidades de venda.
 
 O Problema dos Falsos Negativos: Este projeto demonstrou como a Matriz de Confusão é vital. Focar na redução de Falsos Negativos (oportunidades perdidas) foi a chave para o sucesso.
 
 Valor para o Negócio: Este modelo final pode agora ser usado para criar um score (pontuação) para cada novo cliente. A equipa de marketing pode filtrar a base de dados e focar os seus esforços apenas nos clientes com uma probabilidade de conversão acima de X%, otimizando drasticamente o ROI (Retorno sobre o Investimento) das campanhas.
+
 
 🚀 Próximos Passos
 Feature Importance: Analisar quais variáveis (duration, age, poutcome?) são as mais importantes para a previsão do modelo RandomForest.
